@@ -1,1 +1,5 @@
 trnsl.1.1.20181004T224629Z.f8631add42092d38.b19e24472124c0e96edbe38fa0debba3205bd437
+
+
+URL for list of languages
+https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20181004T224629Z.f8631add42092d38.b19e24472124c0e96edbe38fa0debba3205bd437&ui=en
