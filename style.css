@@ -1,0 +1,27 @@
+body{
+    background-color: lightblue;
+    background-image: url('ocean.jpg');
+}
+h1{
+    text-align: center;
+}
+.mytext{
+    width: 300px;
+    border: 1px solid;
+}
+
+.mybutton{
+    border: 1px solid;
+    color: black;
+    height: 25px;
+    width: 100px;
+    background-color: skyblue;
+    
+}
+
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    
+}

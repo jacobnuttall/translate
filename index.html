@@ -20,31 +20,29 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./script.js"></script>
-    <link href="./main.css" type="text/css" rel="stylesheet"/>
+    <link href="./style.css" type="text/css" rel="stylesheet"/>
 
 </head>
 
 <body>
+    
     <div id="container">
     <div class="jumbotron">
         <h1>TRANSLATOR</h1>
     </div>
     
-    
-    
-    
-    <div class="row align-items-center justify-cintent-center">
+    <div id="content" class="row align-items-center justify-content-center">
     <div class="well col col-sm-8">
     <form>
-        Enter a sentence to translate 
-        <input type="text" id="translate" value="">
-        Pick a language to translate to:
+        Enter text to translate:<br/>
+        <input type="text" id="translate" class="field" value="Hello World"><br/>
+        <input id="submitButton" type="submit" value="Submit">      
         <select id="dropdownMenu">
             <option value="">Loading</option>
-        </select><br>
-        <input id="submitButton" type="submit" value="Submit">
-        Your translation is: 
-        <div id="result"></div>
+        </select>
+        <br/><br/>
+        Your translation is: <br>
+        <textarea id="result" class="field">????</textarea>
     </form>   
 
     <div id="yandex-link">
