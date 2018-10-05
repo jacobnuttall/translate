@@ -2,9 +2,8 @@
 <html lang="en">
     
 <head>
-    <title>Telephone Game</title>
-
-    <link href="./main.css" type="text/css" rel="stylesheet"/>
+    <title>Translator</title>
+    <meta charset="utf-8"/>
     
     <!-- Needed for bootstap,
     see https://www.w3schools.com/bootstrap/bootstrap_get_started.asp -->
@@ -26,48 +25,34 @@
 </head>
 
 <body>
-    <form>
+    <div id="container">
+    <div class="jumbotron">
         <h1>TRANSLATOR</h1>
-        Enter a sentance to translate <input type="text" id="translate" value="">
+    </div>
+    
+    
+    
+    
+    <div class="row align-items-center justify-cintent-center">
+    <div class="well col col-sm-8">
+    <form>
+        Enter a sentence to translate 
+        <input type="text" id="translate" value="">
         Pick a language to translate to:
-        <select id="language">
-            <option value="ru">Russian</option>
-            <option value="de">German</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
+        <select id="dropdownMenu">
+            <option value="">Loading</option>
         </select><br>
         <input id="submitButton" type="submit" value="Submit">
-        Your tranlation is: 
+        Your translation is: 
         <div id="result"></div>
     </form>   
+
+    <div id="yandex-link">
+        <a href="https://passport.yandex.com/auth?retpath=https%3A%2F%2Fpassport.yandex.com%2Fprofile">Powered By Yandex.Translate</a>
+    </div>
+    </div> <!-- close well -->
+    </div> <!-- close row -->
+    </div> <!-- close container -->
 </body>
-<script>
 
-$("#submitButton").click(function(e){
-  var value = $("#translate").val();
-  var value2 = $("#language").val();
-  console.log(value);
-  e.preventDefault();
-
-    var myurl= "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20181004T224629Z.f8631add42092d38.b19e24472124c0e96edbe38fa0debba3205bd437&text=";
-  myurl += value;
-  myurl += "&lang=en-";
-  myurl += value2;
-  console.log(myurl);
-  $.ajax({
-    url : myurl,
-    dataType : "json",
-        success : function(parsed_json) {
-            var outCome = parsed_json['text'];
-            $("#result").html(outCome);
-            
- }
-  });
-  
-  
-});
-</script>
-<footer>
-     <a href="https://passport.yandex.com/auth?retpath=https%3A%2F%2Fpassport.yandex.com%2Fprofile">Powered By Yandex Translate</a>
-</footer>
-<html lang="en">
+</html>
